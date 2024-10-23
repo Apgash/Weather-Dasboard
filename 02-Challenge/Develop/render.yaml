@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: weather-dashboard
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    publish:
+      path: dist
+    envVars:
+      - key: API_KEY
+        value: YOUR_API_KEY
+      - key: PORT
+        value: 3000
